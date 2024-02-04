@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,60 +16,114 @@
             background-position: center;
             background-repeat: no-repeat;
         }
+
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
         }
+
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        header h1 {
+            color: aqua;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+            position: relative;
+            animation: lightning 2s infinite alternate;
+        }
+
+        @keyframes lightning {
+            0% {
+                color: aqua;
+            }
+
+            50% {
+                color: white;
+            }
+
+            100% {
+                color: aqua;
+            }
+        }
+
         .section {
             margin-bottom: 50px;
+            color: aqua;
         }
+
         .section h2 {
             margin-bottom: 20px;
+            color: rgb(255, 0, 255); /* Mix of Aqua and Magenta */
+            cursor: pointer;
+            display: inline-block;
+            padding: 5px 10px;
+            border: 1px solid aqua;
+            border-radius: 5px;
         }
+
         .section p {
             margin-bottom: 20px;
+            color: rgb(0, 255, 255); /* Mix of Aqua and Blue */
         }
+
         .section img {
             max-width: 100%;
             height: auto;
         }
+
         .section a {
-            color: #333;
+            color: aqua;
             text-decoration: none;
         }
+
         .section a:hover {
-            color: #000;
+            color: rgb(255, 0, 255); /* Hover color: Mix of Aqua and Magenta */
+        }
+
+        .email-button {
+            background-color: aqua;
+            color: rgb(255, 0, 255); /* Text color: Mix of Aqua and Magenta */
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .email-button:hover {
+            background-color: rgb(255, 0, 255); /* Hover background color: Mix of Aqua and Magenta */
+            color: aqua;
         }
     </style>
 </head>
+
 <body>
     <header>
         <h1>SIRIUS</h1>
     </header>
     <div class="container">
-        <div class="section">
-            <h2>Upload Your Gaming Condiments</h2>
-            <form action="/upload" method="post" enctype="multipart/form-data">
-                <input type="file" name="file" accept="image/*">
-                <button type="submit">Upload</button>
-            </form>
+        <div class="section" onclick="window.location.href='/about'">
+            <h2>About Us</h2>
+            <p>Learn more about our gaming community.</p>
         </div>
         <div class="section">
-            <h2>Blogs and Stories</h2>
-            <p>Here are some of my gaming blogs and stories:</p>
+            <h2>Explore Our Gaming Universe</h2>
+            <p>Embark on an epic journey through our gaming blogs and stories.</p>
             <ul>
                 <li><a href="/blog1">STORT</a></li>
                 <li><a href="/blog2">Blog 2</a></li>
                 <li><a href="/blog3">Blog 3</a></li>
             </ul>
         </div>
-        <div>
-            <h3>UNDER WORKING PROGRESS</h3>
-            <ul>
-                <li><a href="/about us">about us</a></li>
-            </ul>
+        <div class="section">
+            <h2>Contact Us</h2>
+            <button class="email-button" onclick="window.location.href='mailto:anandhu7906@gmail.com'">Email </button>
         </div>
     </div>
 </body>
+
 </html>
